@@ -1,0 +1,42 @@
+<include file="public@header" />
+</head>
+<body>
+	<div class="wrap js-check-wrap">
+		<ul class="nav nav-tabs">
+			<li class="active"><a href="{:url('Daily/manage')}">日报管理</a></li>
+			<li><a href="{:url('daily/zip')}">生成周报zip下载</a></li>
+		</ul>
+		<form action="#" method="post" class="margin-top-20">
+			<table class="table table-hover table-bordered">
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>姓名</th>
+						<th>工号</th>
+						<th>总日报数</th>
+						<th>本周日报数</th>
+						<!-- <th>操作</th> -->
+					</tr>
+				</thead>
+				<tbody>
+					<foreach name="info" item="vo">
+						<tr>
+							<td>{$vo.id}</td>
+							<td>{$vo.user_login}</td>
+							<td>{$vo.jobnumber}</td>
+							<td>{$vo.sumCount}</td>
+							<td>{$vo.weekCount}</td>
+							<td>
+							<!-- <a href="{:url('Daily/person')}">详情</a>
+								<a href="{:url('Commentadmin/delete',array('id'=>$vo['id']))}" class="js-ajax-delete">删除</a>
+								<a href="{:url('Daily/person')}"></a>  -->
+							</td>
+						</tr>
+					</foreach>
+				</tbody>
+			</table>
+		</form>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+</body>
+</html>

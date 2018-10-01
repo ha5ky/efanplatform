@@ -1,0 +1,55 @@
+<include file="public@header" />
+</head>
+<body>
+	<div class="wrap js-check-wrap">
+		<ul class="nav nav-tabs">
+			<li class="active"><a href="#A" data-toggle="tab">日报填写</a></li>
+		</ul>
+		<form class="form-horizontal js-ajax-form margin-top-20" role="form" action="{:url('daily/OpAdd')}" method="post">
+			<fieldset>
+				<div class="tabbable">
+					<div class="tab-content">
+						<div class="tab-pane active" id="A">
+							<div class="form-group">
+								<label for="input-site-name" class="col-sm-2 control-label"><span class="form-required">*</span>工号</label>
+								<div class="col-md-6 col-sm-10">
+									<input type="text" class="form-control" id="number" name="number" value="{$number}" readonly="" >
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="input-site-name" class="col-sm-2 control-label"><span class="form-required"></span>姓名</label>
+								<div class="col-md-6 col-sm-10">
+									<input type="text" class="form-control" id="name" name="name" value="">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="input-site_analytics" class="col-sm-2 control-label">内容</label>
+								<div class="col-md-6 col-sm-10">
+									<textarea class="form-control" id="input-site_analytics" name="content"></textarea>
+								</div>
+							</div>
+							<!--<div class="form-group">-->
+								<!--<label for="input-site_copyright" class="col-sm-2 control-label">{:lang('WEBSITE_COPYRIGHT_INFOMATION')}</label>-->
+								<!--<div class="col-md-6 col-sm-10">-->
+									<!--<input type="text" class="form-control" id="input-site_copyright" name="options[site_copyright]" value="{$site_copyright|default=''}">-->
+								<!--</div>-->
+							<!--</div>-->
+							<div class="form-group">
+								<div class="col-sm-offset-2 col-sm-10">
+									<input type="submit" class="btn btn-primary js-ajax-submit" data-refresh="1">
+									<input type="reset" class="btn btn-primary js-ajax-submit" data-refresh="1">
+								</div>
+								
+							</div>
+							
+						</div>
+						
+					</div>
+				</div>
+			</fieldset>
+		</form>
+
+	</div>
+	<script type="text/javascript" src="__STATIC__/js/admin.js"></script>
+</body>
+</html>
